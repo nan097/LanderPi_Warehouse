@@ -1,0 +1,48 @@
+# ROS / colcon build and runtime outputs
+build/
+install/
+log/
+__pycache__/
+*.pyc
+*.pyo
+*.o
+*.a
+*.so
+*.so.*
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# Downloaded dependencies and historical workspace copies
+.deps/
+/archive/
+
+# Local assistant state and credentials
+/.agents/
+/.aws/
+/.codex/
+.env
+.env.*
+*.pem
+*.key
+
+# Runtime recordings and compressed raw logs; keep CSV/JSON test summaries
+*.log
+*.log.gz
+*.bag
+*.db3
+
+# Editor / OS files
+.vscode/
+.idea/
+*~
+.DS_Store
+
+# Packaged deliveries and colcon-generated manifests
+/artifacts/*.tar.gz
+/artifacts/*.manifest.json
+/artifacts/*.sha256
+/symlink_install_manifest.txt
+
+# Private experiments are outside this source distribution
+/docs/experiments/

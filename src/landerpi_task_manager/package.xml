@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<package format="3"><name>landerpi_task_manager</name><version>0.1.0</version>
+<description>LanderPi task layer foundation</description>
+<maintainer email="maintainer@example.com">LanderPi maintainers</maintainer><license>Apache-2.0</license>
+<buildtool_depend>ament_python</buildtool_depend>
+<depend>rclpy</depend>
+<exec_depend>landerpi_experiment_tools</exec_depend>
+<depend>landerpi_task_interfaces</depend>
+<exec_depend>launch_ros</exec_depend><exec_depend>ament_index_python</exec_depend><export><build_type>ament_python</build_type></export></package>

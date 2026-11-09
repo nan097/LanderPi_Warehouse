@@ -1,0 +1,5 @@
+# Never use uncalibrated placeholders for execution.
+poses:
+  transport: TODO_CALIBRATE
+  observe: TODO_CALIBRATE
+  home: TODO_CALIBRATE

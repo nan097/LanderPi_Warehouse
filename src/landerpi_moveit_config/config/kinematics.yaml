@@ -1,0 +1,3 @@
+# Template only: select an IK solver after the actual model is confirmed.
+arm:
+  kinematics_solver: TODO_CONFIRM

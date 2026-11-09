@@ -1,0 +1,19 @@
+string request_id
+string target_class
+string output_frame
+float32 min_confidence
+bool require_orientation
+---
+bool success
+uint16 error_code
+string message
+string object_id
+string class_name
+float32 confidence
+geometry_msgs/PoseStamped pose
+geometry_msgs/Vector3 size
+string detector_backend
+---
+string stage
+uint32 candidates_seen
+string detail

@@ -1,0 +1,1518 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <world name="warehouse">
+    <plugin name="state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/gazebo</namespace>
+      </ros>
+      <update_rate>20</update_rate>
+    </plugin>
+    <gui>
+      <camera name="user_camera">
+        <pose>-.5 -1.8 3.3 0 .95 .95</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+    <physics type="ode" name="physics">
+      <max_step_size>0.001</max_step_size>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name="ground">
+      <static>true</static>
+      <link name="ground">
+        <collision name="ground">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="ground">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="A1">
+      <static>true</static>
+      <link name="frame">
+        <collision name="A1_support">
+          <pose>0.45 0.1 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A1_support">
+          <pose>0.45 0.1 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A1_end_-1">
+          <pose>0.39525 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A1_end_-1">
+          <pose>0.39525 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A1_side_-1">
+          <pose>0.45 0.058575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A1_side_-1">
+          <pose>0.45 0.058575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A1_end_1">
+          <pose>0.50475 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A1_end_1">
+          <pose>0.50475 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A1_side_1">
+          <pose>0.45 0.14142500000000002 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A1_side_1">
+          <pose>0.45 0.14142500000000002 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="A1_label">
+          <pose>0.3904 0.1 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/A1</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="A2">
+      <static>true</static>
+      <link name="frame">
+        <collision name="A2_support">
+          <pose>1.05 0.1 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A2_support">
+          <pose>1.05 0.1 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A2_end_-1">
+          <pose>0.9952500000000001 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A2_end_-1">
+          <pose>0.9952500000000001 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A2_side_-1">
+          <pose>1.05 0.058575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A2_side_-1">
+          <pose>1.05 0.058575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A2_end_1">
+          <pose>1.1047500000000001 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A2_end_1">
+          <pose>1.1047500000000001 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A2_side_1">
+          <pose>1.05 0.14142500000000002 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A2_side_1">
+          <pose>1.05 0.14142500000000002 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="A2_label">
+          <pose>0.9904000000000001 0.1 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/A2</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="A3">
+      <static>true</static>
+      <link name="frame">
+        <collision name="A3_support">
+          <pose>1.65 0.1 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A3_support">
+          <pose>1.65 0.1 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A3_end_-1">
+          <pose>1.5952499999999998 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A3_end_-1">
+          <pose>1.5952499999999998 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A3_side_-1">
+          <pose>1.65 0.058575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A3_side_-1">
+          <pose>1.65 0.058575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A3_end_1">
+          <pose>1.70475 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A3_end_1">
+          <pose>1.70475 0.1 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="A3_side_1">
+          <pose>1.65 0.14142500000000002 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="A3_side_1">
+          <pose>1.65 0.14142500000000002 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="A3_label">
+          <pose>1.5904 0.1 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/A3</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="B1">
+      <static>true</static>
+      <link name="frame">
+        <collision name="B1_support">
+          <pose>0.45 0.65 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B1_support">
+          <pose>0.45 0.65 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B1_end_-1">
+          <pose>0.39525 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B1_end_-1">
+          <pose>0.39525 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B1_side_-1">
+          <pose>0.45 0.608575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B1_side_-1">
+          <pose>0.45 0.608575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B1_end_1">
+          <pose>0.50475 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B1_end_1">
+          <pose>0.50475 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B1_side_1">
+          <pose>0.45 0.6914250000000001 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B1_side_1">
+          <pose>0.45 0.6914250000000001 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="B1_label">
+          <pose>0.3904 0.65 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/B1</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="B2">
+      <static>true</static>
+      <link name="frame">
+        <collision name="B2_support">
+          <pose>1.05 0.65 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B2_support">
+          <pose>1.05 0.65 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B2_end_-1">
+          <pose>0.9952500000000001 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B2_end_-1">
+          <pose>0.9952500000000001 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B2_side_-1">
+          <pose>1.05 0.608575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B2_side_-1">
+          <pose>1.05 0.608575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B2_end_1">
+          <pose>1.1047500000000001 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B2_end_1">
+          <pose>1.1047500000000001 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B2_side_1">
+          <pose>1.05 0.6914250000000001 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B2_side_1">
+          <pose>1.05 0.6914250000000001 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="B2_label">
+          <pose>0.9904000000000001 0.65 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/B2</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="B3">
+      <static>true</static>
+      <link name="frame">
+        <collision name="B3_support">
+          <pose>1.65 0.65 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B3_support">
+          <pose>1.65 0.65 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B3_end_-1">
+          <pose>1.5952499999999998 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B3_end_-1">
+          <pose>1.5952499999999998 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B3_side_-1">
+          <pose>1.65 0.608575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B3_side_-1">
+          <pose>1.65 0.608575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B3_end_1">
+          <pose>1.70475 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B3_end_1">
+          <pose>1.70475 0.65 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="B3_side_1">
+          <pose>1.65 0.6914250000000001 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="B3_side_1">
+          <pose>1.65 0.6914250000000001 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.225 0.24 0.26 1</ambient>
+            <diffuse>0.45 0.48 0.52 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="B3_label">
+          <pose>1.5904 0.65 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/B3</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="OUT_RED">
+      <static>true</static>
+      <link name="frame">
+        <collision name="OUT_RED_support">
+          <pose>0.45 1.25 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_RED_support">
+          <pose>0.45 1.25 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.425 0.0125 0.0125 1</ambient>
+            <diffuse>0.85 0.025 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_RED_end_-1">
+          <pose>0.39525 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_RED_end_-1">
+          <pose>0.39525 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.425 0.0125 0.0125 1</ambient>
+            <diffuse>0.85 0.025 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_RED_side_-1">
+          <pose>0.45 1.208575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_RED_side_-1">
+          <pose>0.45 1.208575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.425 0.0125 0.0125 1</ambient>
+            <diffuse>0.85 0.025 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_RED_end_1">
+          <pose>0.50475 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_RED_end_1">
+          <pose>0.50475 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.425 0.0125 0.0125 1</ambient>
+            <diffuse>0.85 0.025 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_RED_side_1">
+          <pose>0.45 1.291425 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_RED_side_1">
+          <pose>0.45 1.291425 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.425 0.0125 0.0125 1</ambient>
+            <diffuse>0.85 0.025 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="OUT_RED_label">
+          <pose>0.3904 1.25 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/OUT_RED</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="OUT_GREEN">
+      <static>true</static>
+      <link name="frame">
+        <collision name="OUT_GREEN_support">
+          <pose>1.05 1.25 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_GREEN_support">
+          <pose>1.05 1.25 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.4 0.0125 1</ambient>
+            <diffuse>0.025 0.8 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_GREEN_end_-1">
+          <pose>0.9952500000000001 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_GREEN_end_-1">
+          <pose>0.9952500000000001 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.4 0.0125 1</ambient>
+            <diffuse>0.025 0.8 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_GREEN_side_-1">
+          <pose>1.05 1.208575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_GREEN_side_-1">
+          <pose>1.05 1.208575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.4 0.0125 1</ambient>
+            <diffuse>0.025 0.8 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_GREEN_end_1">
+          <pose>1.1047500000000001 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_GREEN_end_1">
+          <pose>1.1047500000000001 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.4 0.0125 1</ambient>
+            <diffuse>0.025 0.8 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_GREEN_side_1">
+          <pose>1.05 1.291425 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_GREEN_side_1">
+          <pose>1.05 1.291425 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.4 0.0125 1</ambient>
+            <diffuse>0.025 0.8 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="OUT_GREEN_label">
+          <pose>0.9904000000000001 1.25 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/OUT_GREEN</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="OUT_BLUE">
+      <static>true</static>
+      <link name="frame">
+        <collision name="OUT_BLUE_support">
+          <pose>1.65 1.25 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_BLUE_support">
+          <pose>1.65 1.25 0.001900000000000001 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.119 0.0857 0.003799999999999998</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.0125 0.425 1</ambient>
+            <diffuse>0.025 0.025 0.85 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_BLUE_end_-1">
+          <pose>1.5952499999999998 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_BLUE_end_-1">
+          <pose>1.5952499999999998 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.0125 0.425 1</ambient>
+            <diffuse>0.025 0.025 0.85 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_BLUE_side_-1">
+          <pose>1.65 1.208575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_BLUE_side_-1">
+          <pose>1.65 1.208575 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.0125 0.425 1</ambient>
+            <diffuse>0.025 0.025 0.85 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_BLUE_end_1">
+          <pose>1.70475 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_BLUE_end_1">
+          <pose>1.70475 1.25 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.009499999999999995 0.0857 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.0125 0.425 1</ambient>
+            <diffuse>0.025 0.025 0.85 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <collision name="OUT_BLUE_side_1">
+          <pose>1.65 1.291425 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="OUT_BLUE_side_1">
+          <pose>1.65 1.291425 0.028800000000000003 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.0028499999999999984 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.0125 0.425 1</ambient>
+            <diffuse>0.025 0.025 0.85 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+        <visual name="OUT_BLUE_label">
+          <pose>1.5904 1.25 0.0269 1.5707963267948966 0 -1.5707963267948966</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>.08 .025</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>Warehouse/OUT_BLUE</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_west">
+      <static>true</static>
+      <link name="frame">
+        <collision name="wall_west">
+          <pose>-0.35 0.6499999999999999 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.08 2.0 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="wall_west">
+          <pose>-0.35 0.6499999999999999 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.08 2.0 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.35 0.36 0.37 1</ambient>
+            <diffuse>0.7 0.72 0.74 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_east">
+      <static>true</static>
+      <link name="frame">
+        <collision name="wall_east">
+          <pose>2.05 0.6499999999999999 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.08 2.0 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="wall_east">
+          <pose>2.05 0.6499999999999999 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.08 2.0 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.35 0.36 0.37 1</ambient>
+            <diffuse>0.7 0.72 0.74 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_south">
+      <static>true</static>
+      <link name="frame">
+        <collision name="wall_south">
+          <pose>0.8499999999999999 -0.35 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.4 0.08 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="wall_south">
+          <pose>0.8499999999999999 -0.35 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.4 0.08 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.35 0.36 0.37 1</ambient>
+            <diffuse>0.7 0.72 0.74 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_north">
+      <static>true</static>
+      <link name="frame">
+        <collision name="wall_north">
+          <pose>0.8499999999999999 1.65 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.4 0.08 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="wall_north">
+          <pose>0.8499999999999999 1.65 0.06 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.4 0.08 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.35 0.36 0.37 1</ambient>
+            <diffuse>0.7 0.72 0.74 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="cargo_A1_red">
+      <pose>0.45 0.1 0.028300000000000002 0 0 0</pose>
+      <link name="box">
+        <inertial>
+          <mass>0.04</mass>
+          <inertia>
+            <ixx>1.1003333333333335e-05</ixx>
+            <iyy>1.1003333333333335e-05</iyy>
+            <izz>6e-06</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.65</mu>
+                <mu2>0.65</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.425 0.0125 0.0125 1</ambient>
+            <diffuse>0.85 0.025 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="cargo_A2_green">
+      <pose>1.05 0.1 0.028300000000000002 0 0 0</pose>
+      <link name="box">
+        <inertial>
+          <mass>0.04</mass>
+          <inertia>
+            <ixx>1.1003333333333335e-05</ixx>
+            <iyy>1.1003333333333335e-05</iyy>
+            <izz>6e-06</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.65</mu>
+                <mu2>0.65</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.4 0.0125 1</ambient>
+            <diffuse>0.025 0.8 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="cargo_A3_blue">
+      <pose>1.65 0.1 0.028300000000000002 0 0 0</pose>
+      <link name="box">
+        <inertial>
+          <mass>0.04</mass>
+          <inertia>
+            <ixx>1.1003333333333335e-05</ixx>
+            <iyy>1.1003333333333335e-05</iyy>
+            <izz>6e-06</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.65</mu>
+                <mu2>0.65</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.0125 0.425 1</ambient>
+            <diffuse>0.025 0.025 0.85 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="cargo_B1_red">
+      <pose>0.45 0.65 0.028300000000000002 0 0 0</pose>
+      <link name="box">
+        <inertial>
+          <mass>0.04</mass>
+          <inertia>
+            <ixx>1.1003333333333335e-05</ixx>
+            <iyy>1.1003333333333335e-05</iyy>
+            <izz>6e-06</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.65</mu>
+                <mu2>0.65</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.425 0.0125 0.0125 1</ambient>
+            <diffuse>0.85 0.025 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="cargo_B2_green">
+      <pose>1.05 0.65 0.028300000000000002 0 0 0</pose>
+      <link name="box">
+        <inertial>
+          <mass>0.04</mass>
+          <inertia>
+            <ixx>1.1003333333333335e-05</ixx>
+            <iyy>1.1003333333333335e-05</iyy>
+            <izz>6e-06</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.65</mu>
+                <mu2>0.65</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="box">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.049</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.0125 0.4 0.0125 1</ambient>
+            <diffuse>0.025 0.8 0.025 1</diffuse>
+            <specular>0 0 0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

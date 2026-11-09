@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "partition": "landerpi_39461",
+  "scene_info_providers": [
+    "tcp://172.17.0.1:40107"
+  ],
+  "legacy_scene_info_providers": [
+    "tcp://172.17.0.1:39401"
+  ],
+  "isolated_from_legacy": true
+}

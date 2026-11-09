@@ -1,0 +1,154 @@
+{
+  "baseline_single": {
+    "success": true,
+    "task_duration_s": 183.89948530000038,
+    "navigation_s": 79.55549775200052,
+    "phase_seconds": [
+      [
+        0,
+        "TRANSPORT",
+        5.846772570000212
+      ],
+      [
+        1,
+        "NAVIGATE_PICK",
+        13.426905084000282
+      ],
+      [
+        1,
+        "OBSERVE_OBJECT",
+        16.368158887999925
+      ],
+      [
+        1,
+        "DETECT_OBJECT",
+        1.0914412120000634
+      ],
+      [
+        1,
+        "PICK_OBJECT",
+        34.267892220999784
+      ],
+      [
+        1,
+        "NAVIGATE_PLACE",
+        35.260224372000266
+      ],
+      [
+        1,
+        "PLACE_OBJECT",
+        44.70648566199998
+      ],
+      [
+        1,
+        "RETURN_HOME",
+        30.86836829599997
+      ]
+    ]
+  },
+  "fast_single": {
+    "success": true,
+    "task_duration_s": 79.82481165600075,
+    "navigation_s": 26.713200345997393,
+    "phase_seconds": [
+      [
+        0,
+        "TRANSPORT",
+        1.7676109789990733
+      ],
+      [
+        1,
+        "NAVIGATE_PICK",
+        4.92826304799928
+      ],
+      [
+        1,
+        "OBSERVE_OBJECT",
+        6.057279968999865
+      ],
+      [
+        1,
+        "DETECT_OBJECT",
+        0.14185492399883515
+      ],
+      [
+        1,
+        "PICK_OBJECT",
+        20.129994349999834
+      ],
+      [
+        1,
+        "NAVIGATE_PLACE",
+        10.13137762199949
+      ],
+      [
+        1,
+        "PLACE_OBJECT",
+        23.393913433999842
+      ],
+      [
+        1,
+        "RETURN_HOME",
+        11.653559675998622
+      ]
+    ]
+  },
+  "task_time_reduction_percent": 56.59323813452751,
+  "method": "Same single cargo_A1_red task, physical placement in OUT_RED and return home; task time excludes launch/readiness. One run per version; wall time depends on simulation load and random planning.",
+  "fast_full": {
+    "success": true,
+    "total": 5,
+    "completed": 5,
+    "remaining": [],
+    "placements": {
+      "cargo_A1_red": {
+        "destination": "OUT_RED",
+        "position": [
+          0.46341107339493015,
+          1.225502741453366,
+          0.018796597399549534
+        ]
+      },
+      "cargo_A2_green": {
+        "destination": "OUT_GREEN",
+        "position": [
+          1.020633768370399,
+          1.2707803641241178,
+          0.028297295344442055
+        ]
+      },
+      "cargo_A3_blue": {
+        "destination": "OUT_BLUE",
+        "position": [
+          1.6643624841122489,
+          1.2526481258651065,
+          0.018798489752571125
+        ]
+      },
+      "cargo_B1_red": {
+        "destination": "OUT_RED",
+        "position": [
+          0.46488319996256794,
+          1.274558225594572,
+          0.018800000098817944
+        ]
+      },
+      "cargo_B2_green": {
+        "destination": "OUT_GREEN",
+        "position": [
+          1.0640690859769246,
+          1.2350332567078888,
+          0.018792207640427838
+        ]
+      }
+    },
+    "duration_s": 393.3120081829993,
+    "task_duration_s": 379.210740221,
+    "motion_profile": "fast",
+    "peak_base_speed_mps": 0.3201111369019144,
+    "peak_arm_joint_speed_radps": 0.7152935438711852,
+    "csv": "/tmp/landerpi_warehouse_acceptance_28940.csv",
+    "log": "/tmp/landerpi_warehouse_acceptance_28940.log"
+  },
+  "motion_config_sha256": "ed1b8605d50be3d2d1a1d9a9756d8ee9d1463650401f801ea9903554272b3160"
+}

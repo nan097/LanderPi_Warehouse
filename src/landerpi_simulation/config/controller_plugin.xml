@@ -1,0 +1,1 @@
+<library path="landerpi_holonomic_controller"><class name="landerpi_simulation/HolonomicController" type="landerpi::HolonomicController" base_class_type="nav2_core::Controller"><description>Collision-checked low-cost holonomic simulation path follower</description></class></library>

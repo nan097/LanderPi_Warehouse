@@ -1,0 +1,15 @@
+string[] joint_names
+float64[] positions
+float32 velocity_scale
+float32 acceleration_scale
+bool execute
+---
+bool success
+uint16 error_code
+string message
+builtin_interfaces/Duration planning_time
+builtin_interfaces/Duration execution_time
+---
+string stage
+float32 progress
+string detail

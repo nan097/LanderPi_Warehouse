@@ -1,0 +1,37 @@
+# Only the pure 2x3 warehouse simulation uses the faster profile by default.
+fast:
+  navigation:
+    controller_frequency: 12.0
+    FollowPath.cruise_speed: 0.32
+    FollowPath.lookahead_distance: 0.15
+    FollowPath.position_gain: 2.4
+    FollowPath.max_angular_speed: 0.5
+    FollowPath.yaw_gain: 1.2
+    FollowPath.linear_acceleration: 0.6
+    FollowPath.angular_acceleration: 1.0
+  runtime:
+    joint_goal_tolerance: 0.001
+    arm_velocity_scale: 0.7
+    arm_acceleration_scale: 0.65
+    gripper_duration: 0.65
+    alignment_gain: 1.2
+    alignment_max_linear: 0.08
+    alignment_max_angular: 0.2
+legacy:
+  navigation:
+    controller_frequency: 8.0
+    FollowPath.cruise_speed: 0.18
+    FollowPath.lookahead_distance: 0.15
+    FollowPath.position_gain: 0.9
+    FollowPath.max_angular_speed: 0.3
+    FollowPath.yaw_gain: 0.8
+    FollowPath.linear_acceleration: 0.5
+    FollowPath.angular_acceleration: 1.0
+  runtime:
+    joint_goal_tolerance: 0.006
+    arm_velocity_scale: 0.4
+    arm_acceleration_scale: 0.4
+    gripper_duration: 1.0
+    alignment_gain: 0.8
+    alignment_max_linear: 0.06
+    alignment_max_angular: 0.15

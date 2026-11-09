@@ -1,0 +1,2 @@
+task_id,execution_mode,software_version,start_time,duration_s,success,completed_quantity,error_code,message,phase_seconds
+demo_27059,simulation,0.2.0,1790880295.4333956,152.07645481299915,True,1,0,Nav2 -> RGB-D -> MoveIt pick -> carry -> place verified,"[('TRANSPORT', 7.797473983999225), ('NAVIGATE_PICK', 15.897888807998243), ('DETECT_OBJECT', 4.593226053999388), ('PICK_OBJECT', 36.51400198899864), ('NAVIGATE_PLACE', 30.669767826999305), ('PLACE_OBJECT', 24.198060987000645), ('RETURN_HOME', 32.31687101500211)]"

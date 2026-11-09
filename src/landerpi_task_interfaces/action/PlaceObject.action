@@ -1,0 +1,16 @@
+string task_id
+string object_id
+string station
+geometry_msgs/PoseStamped place_pose
+string place_profile
+bool update_planning_scene
+---
+bool success
+uint16 error_code
+string message
+geometry_msgs/PoseStamped executed_place_pose
+string backend
+---
+string stage
+float32 progress
+string detail

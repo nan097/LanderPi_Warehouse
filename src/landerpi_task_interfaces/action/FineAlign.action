@@ -1,0 +1,17 @@
+string station
+uint8 mode
+float32 xy_tolerance
+float32 yaw_tolerance
+builtin_interfaces/Duration timeout
+---
+bool success
+uint16 error_code
+string message
+geometry_msgs/PoseStamped final_pose
+float32 final_xy_error
+float32 final_yaw_error
+---
+string stage
+float32 xy_error
+float32 yaw_error
+string detail

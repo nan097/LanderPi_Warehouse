@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "total": 5,
+  "completed": 1,
+  "remaining": [
+    "cargo_A2_green",
+    "cargo_A3_blue",
+    "cargo_B1_red",
+    "cargo_B2_green"
+  ],
+  "placements": {
+    "cargo_A1_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.46377683342267784,
+        1.2250097801703876,
+        0.018798085545095933
+      ]
+    }
+  },
+  "duration_s": 93.41873304999899,
+  "task_duration_s": 79.824811656,
+  "motion_profile": "fast",
+  "peak_base_speed_mps": 0.3201001155506201,
+  "peak_arm_joint_speed_radps": 0.6797960000132531,
+  "csv": "/tmp/landerpi_warehouse_acceptance_29812.csv",
+  "log": "/tmp/landerpi_warehouse_acceptance_29812.log"
+}

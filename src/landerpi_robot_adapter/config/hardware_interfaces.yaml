@@ -1,0 +1,29 @@
+# Source inventory only. NOT a validated live adapter configuration.
+status: TODO_CONFIRM_RUNTIME
+base:
+  upper_cmd_topic: /cmd_vel
+  hardware_cmd_topic: /controller/cmd_vel
+  hardware_cmd_type: geometry_msgs/msg/Twist
+  hardware_odom_topic: /odom_raw
+  hardware_odom_type: nav_msgs/msg/Odometry
+  odom_frame: odom
+  base_frame: base_footprint
+  publish_odom_tf: false
+  max_vx: TODO_MEASURE
+  max_vy: TODO_MEASURE
+  max_wz: TODO_MEASURE
+arm:
+  joint_state_source: /controller_manager/joint_states
+  hardware_command_interface: /servo_controller
+  hardware_command_type: servo_controller_msgs/msg/ServosPosition
+  existing_trajectory_action: /arm_controller/follow_joint_trajectory
+  joints: [joint1, joint2, joint3, joint4, joint5]
+  sixth_axis: TODO_CONFIRM_HARDWARE_VS_URDF
+  feedback_semantics: OPEN_LOOP_ASSUMPTION
+  calibration: TODO_CALIBRATE
+gripper:
+  hardware_interface: /servo_controller
+  action: /gripper_controller/gripper_cmd
+  joint: TODO_CONFIRM
+  open_position: TODO_MEASURE
+  closed_position: TODO_MEASURE

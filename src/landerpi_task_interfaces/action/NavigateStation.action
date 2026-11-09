@@ -1,0 +1,12 @@
+string station
+builtin_interfaces/Duration timeout
+---
+bool success
+uint16 error_code
+string message
+geometry_msgs/PoseStamped reached_pose
+---
+string stage
+float32 distance_remaining
+builtin_interfaces/Duration navigation_time
+string detail

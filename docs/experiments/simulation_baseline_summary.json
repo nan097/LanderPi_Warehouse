@@ -1,0 +1,31 @@
+{
+  "task_records": 12,
+  "successful_tasks": 10,
+  "task_duration_s": [
+    113.57984137599851,
+    122.57254466099766,
+    120.78860249699937,
+    110.68922658299925,
+    115.93690080300075,
+    120.16898898899672,
+    114.76056127599804,
+    114.40290528300102,
+    112.3169309799996,
+    113.78837316600038
+  ],
+  "measured_grasps": 20,
+  "max_rgbd_position_error_m": 0.007352473873500079,
+  "max_tool_object_distance_m": 0.00789910382479405,
+  "errors": [
+    {
+      "task_id": "cancel_49877",
+      "error_code": 502
+    },
+    {
+      "task_id": "missing_target_49877",
+      "error_code": 301
+    }
+  ],
+  "source_log": "docs/experiments/simulation_baseline.log.gz",
+  "source_csv": "docs/experiments/simulation_baseline_10_tasks.csv"
+}

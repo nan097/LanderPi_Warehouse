@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "total": 5,
+  "completed": 5,
+  "remaining": [],
+  "placements": {
+    "cargo_A1_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.7176195737166496,
+        2.993518002870588,
+        0.1845000336013292
+      ]
+    },
+    "cargo_A2_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        2.0173113315212077,
+        3.0027188039752186,
+        0.18450016332990712
+      ]
+    },
+    "cargo_A3_blue": {
+      "destination": "OUT_BLUE",
+      "position": [
+        3.2207074006828598,
+        3.005699328101699,
+        0.18450020155247193
+      ]
+    },
+    "cargo_B1_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.7762152854418525,
+        3.01398548847825,
+        0.17499755566058892
+      ]
+    },
+    "cargo_B2_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        1.9758684214779918,
+        3.0075778190993288,
+        0.18450041795940966
+      ]
+    }
+  },
+  "duration_s": 776.9355378699984,
+  "csv": "/tmp/landerpi_warehouse_acceptance_95750.csv",
+  "log": "/tmp/landerpi_warehouse_acceptance_95750.log"
+}

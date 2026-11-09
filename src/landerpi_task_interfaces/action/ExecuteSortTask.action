@@ -1,0 +1,20 @@
+string task_id
+string object_class
+string pick_station
+string place_station
+uint32 quantity
+bool return_home
+---
+bool success
+uint16 error_code
+string message
+uint32 completed_quantity
+builtin_interfaces/Duration total_duration
+---
+string current_state
+float32 progress
+string detail
+uint32 current_index
+uint32 navigation_retry
+uint32 detection_retry
+uint32 grasp_retry

@@ -1,0 +1,125 @@
+{
+  "version": 2,
+  "start": [
+    0.0,
+    -0.65
+  ],
+  "room": [
+    -0.7,
+    4.1,
+    -1.05,
+    3.85
+  ],
+  "box_size": [
+    0.03,
+    0.03,
+    0.049
+  ],
+  "box_mass": 0.04,
+  "support_height": 0.16,
+  "dock_offset": 0.24,
+  "cargo_x_offset": 0.0,
+  "output_offsets": [
+    -0.025,
+    0.025
+  ],
+  "colors": {
+    "red": [
+      0.85,
+      0.025,
+      0.025
+    ],
+    "green": [
+      0.025,
+      0.8,
+      0.025
+    ],
+    "blue": [
+      0.025,
+      0.025,
+      0.85
+    ]
+  },
+  "racks": {
+    "A1": [
+      0.75,
+      0.0
+    ],
+    "A2": [
+      2.0,
+      0.0
+    ],
+    "A3": [
+      3.25,
+      0.0
+    ],
+    "B1": [
+      0.75,
+      1.5
+    ],
+    "B2": [
+      2.0,
+      1.5
+    ],
+    "B3": [
+      3.25,
+      1.5
+    ]
+  },
+  "outputs": {
+    "OUT_RED": {
+      "center": [
+        0.75,
+        3.0
+      ],
+      "color": "red"
+    },
+    "OUT_GREEN": {
+      "center": [
+        2.0,
+        3.0
+      ],
+      "color": "green"
+    },
+    "OUT_BLUE": {
+      "center": [
+        3.25,
+        3.0
+      ],
+      "color": "blue"
+    }
+  },
+  "container_inner": [
+    0.1,
+    0.08,
+    0.05
+  ],
+  "container_outer": [
+    0.119,
+    0.0857,
+    0.0538
+  ],
+  "cargo_min_spacing": 0.033,
+  "inventory": [
+    {
+      "rack": "A1",
+      "color": "red"
+    },
+    {
+      "rack": "A2",
+      "color": "green"
+    },
+    {
+      "rack": "A3",
+      "color": "blue"
+    },
+    {
+      "rack": "B1",
+      "color": "red"
+    },
+    {
+      "rack": "B2",
+      "color": "green"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "frame": "warehouse_camera_optical_frame",
+  "stamp": {
+    "sec": 505,
+    "nanosec": 277000000
+  },
+  "progress": {
+    "total": 18,
+    "completed": 7,
+    "remaining": 11,
+    "phase": "DETECT_OBJECT",
+    "current_object": "cargo_B2_green",
+    "source": "B2",
+    "destination": "OUT_GREEN",
+    "slot": 2,
+    "outputs": {
+      "red": 2,
+      "green": 2,
+      "blue": 3
+    },
+    "fault": "",
+    "camera": "B2",
+    "completed_ids": [
+      "cargo_A1_red",
+      "cargo_B1_blue",
+      "cargo_B1_green",
+      "cargo_B2_blue",
+      "cargo_B3_blue",
+      "cargo_B3_green",
+      "cargo_B3_red"
+    ]
+  }
+}

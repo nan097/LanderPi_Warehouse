@@ -1,0 +1,4 @@
+# Template only: existing FJT must be audited before use.
+status: TODO_CONFIRM
+trajectory_action: /arm_controller/follow_joint_trajectory
+gripper_action: /gripper_controller/gripper_cmd

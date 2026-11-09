@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot name="rosmentor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="onboard_camera" default="false"/>
+  <!-- Simulation-only wrapper: never changes the hardware description. -->
+  <xacro:include filename="$(find landerpi_description)/urdf/landerpi.xacro"/>
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware><plugin>gazebo_ros2_control/GazeboSystem</plugin></hardware>
+    <xacro:macro name="sim_joint" params="name initial">
+      <joint name="${name}">
+        <command_interface name="position"/>
+        <state_interface name="position"><param name="initial_value">${initial}</param></state_interface>
+        <state_interface name="velocity"/>
+      </joint>
+    </xacro:macro>
+    <xacro:sim_joint name="joint1" initial="0"/>
+    <xacro:sim_joint name="joint2" initial="0"/>
+    <xacro:sim_joint name="joint3" initial="0"/>
+    <xacro:sim_joint name="joint4" initial="0"/>
+    <xacro:sim_joint name="joint5" initial="0"/>
+    <xacro:sim_joint name="r_joint" initial="0"/>
+    <xacro:macro name="sim_mimic" params="name multiplier">
+      <joint name="${name}">
+        <param name="mimic">r_joint</param><param name="multiplier">${multiplier}</param>
+        <command_interface name="position"/>
+        <state_interface name="position"/><state_interface name="velocity"/>
+      </joint>
+    </xacro:macro>
+    <xacro:sim_mimic name="gripper_left_join" multiplier="-1.5"/>
+    <xacro:sim_mimic name="gripper_right_joint" multiplier="-1.5"/>
+    <xacro:sim_mimic name="left_jaw_joint" multiplier="-0.0115995"/>
+    <xacro:sim_mimic name="right_jaw_joint" multiplier="0.0115995"/>
+  </ros2_control>
+  <gazebo>
+    <plugin name="ideal_grasp" filename="liblanderpi_grasp.so"/>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>$(find landerpi_simulation)/config/controllers.yaml</parameters>
+    </plugin>
+    <!-- Ideal planar velocity model supporting vx, vy and wz. Not wheel dynamics. -->
+    <plugin name="planar_base" filename="libgazebo_ros_planar_move.so">
+      <ros><remapping>cmd_vel:=/cmd_vel</remapping><remapping>odom:=/odom</remapping></ros>
+      <update_rate>50</update_rate><publish_rate>50</publish_rate><publish_odom>true</publish_odom><publish_odom_tf>false</publish_odom_tf>
+      <odometry_frame>odom</odometry_frame><robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+  </gazebo>
+  <gazebo reference="lidar_frame">
+    <sensor name="lidar" type="ray">
+      <always_on>true</always_on><update_rate>10</update_rate>
+      <ray><scan><horizontal><samples>360</samples><resolution>1</resolution><min_angle>-3.14159</min_angle><max_angle>3.14159</max_angle></horizontal></scan>
+        <range><min>0.08</min><max>10</max><resolution>0.01</resolution></range></ray>
+      <plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
+        <ros><remapping>~/out:=/scan_raw</remapping></ros><output_type>sensor_msgs/LaserScan</output_type><frame_name>lidar_frame</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <xacro:if value="$(arg onboard_camera)">
+    <link name="warehouse_camera_optical_frame"/>
+    <joint name="warehouse_camera_optical_joint" type="fixed">
+      <parent link="depth_cam_link"/><child link="warehouse_camera_optical_frame"/>
+      <origin xyz="0.003 0 0" rpy="-1.57079632679 0 -1.57079632679"/>
+    </joint>
+    <gazebo reference="depth_cam_link">
+      <sensor name="onboard_depth_camera" type="depth">
+        <pose>0.003 0 0 0 0 0</pose><always_on>true</always_on><update_rate>3</update_rate>
+        <camera><horizontal_fov>1.2</horizontal_fov><image><width>320</width><height>240</height><format>R8G8B8</format></image><clip><near>0.08</near><far>4</far></clip></camera>
+        <plugin name="onboard_rgbd" filename="libgazebo_ros_camera.so">
+          <ros><namespace>/warehouse_camera</namespace></ros><camera_name>camera</camera_name>
+          <frame_name>warehouse_camera_optical_frame</frame_name><min_depth>0.08</min_depth><max_depth>4</max_depth>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:if>
+</robot>

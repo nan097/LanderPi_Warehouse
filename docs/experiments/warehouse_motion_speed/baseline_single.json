@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "total": 5,
+  "completed": 1,
+  "remaining": [
+    "cargo_A2_green",
+    "cargo_A3_blue",
+    "cargo_B1_red",
+    "cargo_B2_green"
+  ],
+  "placements": {
+    "cargo_A1_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.46141119432013,
+        1.226085116921223,
+        0.01879091977762403
+      ]
+    }
+  },
+  "duration_s": 209.2769251969994,
+  "csv": "/tmp/landerpi_warehouse_acceptance_26322.csv",
+  "log": "/tmp/landerpi_warehouse_acceptance_26322.log"
+}

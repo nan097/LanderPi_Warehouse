@@ -1,0 +1,12 @@
+string name
+float32 velocity_scale
+float32 acceleration_scale
+bool execute
+---
+bool success
+uint16 error_code
+string message
+---
+string stage
+float32 progress
+string detail

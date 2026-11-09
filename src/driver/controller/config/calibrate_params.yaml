@@ -1,0 +1,4 @@
+/**:
+  ros__parameters:
+    linear_correction_factor: 0.94 # 线性速度校正因子
+    angular_correction_factor: 1.00 # 角速度校正因子

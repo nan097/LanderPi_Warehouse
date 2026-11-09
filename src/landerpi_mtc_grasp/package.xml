@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>landerpi_mtc_grasp</name><version>0.1.0</version>
+  <description>RGB-D color cube grasping with MoveIt Task Constructor in Gazebo.</description>
+  <maintainer email="maintainer@example.com">LanderPi maintainers</maintainer><license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <!-- Optional isolated joint-group planning experiment. -->
+  <build_depend>ompl</build_depend><depend>geometric_shapes</depend><build_depend>urdf</build_depend><build_depend>srdfdom</build_depend>
+  <depend>rclcpp</depend><depend>rcl_interfaces</depend><depend>rclcpp_action</depend><depend>control_msgs</depend><depend>moveit_task_constructor_core</depend><depend>moveit_task_constructor_msgs</depend>
+  <depend>moveit_ros_planning_interface</depend><depend>moveit_msgs</depend>
+  <depend>geometry_msgs</depend><depend>sensor_msgs</depend><depend>std_msgs</depend>
+  <depend>std_srvs</depend><depend>gazebo_msgs</depend><depend>shape_msgs</depend>
+  <exec_depend>moveit_task_constructor_capabilities</exec_depend>
+  <exec_depend>ros_robot_controller</exec_depend><exec_depend>ros_robot_controller_msgs</exec_depend>
+  <exec_depend>controller</exec_depend><exec_depend>joy</exec_depend><exec_depend>xacro</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend><exec_depend>python3-yaml</exec_depend>
+  <exec_depend>landerpi_simulation</exec_depend><exec_depend>rclpy</exec_depend>
+  <exec_depend>cv_bridge</exec_depend><exec_depend>python3-opencv</exec_depend><exec_depend>python3-numpy</exec_depend>
+  <exec_depend>tf2_ros</exec_depend><exec_depend>tf2_geometry_msgs</exec_depend>
+  <exec_depend>message_filters</exec_depend><exec_depend>launch_ros</exec_depend>
+  <test_depend>urdf</test_depend><test_depend>srdfdom</test_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

@@ -1,0 +1,12 @@
+# Load with a future station parser, not directly as ROS node parameters.
+stations:
+  home:
+    nav_pose: {frame_id: map, x: TODO_MEASURE, y: TODO_MEASURE, yaw: TODO_MEASURE}
+  pick_station:
+    nav_pose: {frame_id: map, x: TODO_MEASURE, y: TODO_MEASURE, yaw: TODO_MEASURE}
+    fine_alignment: {enabled: false, marker_id: TODO_CONFIRM}
+    manipulation: {observe_pose: observe, grasp_profile: top_down}
+  place_station:
+    nav_pose: {frame_id: map, x: TODO_MEASURE, y: TODO_MEASURE, yaw: TODO_MEASURE}
+    fine_alignment: {enabled: false, marker_id: TODO_CONFIRM}
+    manipulation: {place_profile: default_place}

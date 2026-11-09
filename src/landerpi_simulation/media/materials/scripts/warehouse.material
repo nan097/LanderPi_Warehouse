@@ -1,0 +1,134 @@
+material Warehouse/A1
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture A1.png
+   }
+  }
+ }
+}
+
+material Warehouse/A2
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture A2.png
+   }
+  }
+ }
+}
+
+material Warehouse/A3
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture A3.png
+   }
+  }
+ }
+}
+
+material Warehouse/B1
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture B1.png
+   }
+  }
+ }
+}
+
+material Warehouse/B2
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture B2.png
+   }
+  }
+ }
+}
+
+material Warehouse/B3
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture B3.png
+   }
+  }
+ }
+}
+
+material Warehouse/OUT_RED
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture OUT_RED.png
+   }
+  }
+ }
+}
+
+material Warehouse/OUT_GREEN
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture OUT_GREEN.png
+   }
+  }
+ }
+}
+
+material Warehouse/OUT_BLUE
+{
+ technique
+ {
+  pass
+  {
+   lighting off
+   texture_unit
+   {
+    texture OUT_BLUE.png
+   }
+  }
+ }
+}

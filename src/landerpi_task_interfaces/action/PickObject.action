@@ -1,0 +1,17 @@
+string task_id
+string object_id
+string object_class
+geometry_msgs/PoseStamped object_pose
+geometry_msgs/Vector3 object_size
+string grasp_profile
+bool update_planning_scene
+---
+bool success
+uint16 error_code
+string message
+geometry_msgs/PoseStamped executed_grasp_pose
+string backend
+---
+string stage
+float32 progress
+string detail

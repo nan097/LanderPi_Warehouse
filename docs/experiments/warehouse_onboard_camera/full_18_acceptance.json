@@ -1,0 +1,155 @@
+{
+  "success": true,
+  "total": 18,
+  "completed": 18,
+  "remaining": [],
+  "placements": {
+    "cargo_A1_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.6397670437359129,
+        2.7420006550512923,
+        0.1800000001063391
+      ]
+    },
+    "cargo_A1_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        1.8930856344313782,
+        3.148725002634193,
+        0.1799954118060457
+      ]
+    },
+    "cargo_A1_blue": {
+      "destination": "OUT_BLUE",
+      "position": [
+        3.1418276629700417,
+        3.0542063866247546,
+        0.17999220331358246
+      ]
+    },
+    "cargo_A2_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.641018419718002,
+        3.2421972829986947,
+        0.17999254487287683
+      ]
+    },
+    "cargo_A2_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        1.9320784167290936,
+        3.247470637576481,
+        0.1849952735331998
+      ]
+    },
+    "cargo_A2_blue": {
+      "destination": "OUT_BLUE",
+      "position": [
+        3.141414020395094,
+        3.2418187946737604,
+        0.18000000014382456
+      ]
+    },
+    "cargo_A3_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.6706202666910536,
+        3.161279279969462,
+        0.1849946526720704
+      ]
+    },
+    "cargo_A3_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        1.889515272032386,
+        3.054043219883171,
+        0.1799980302261664
+      ]
+    },
+    "cargo_A3_blue": {
+      "destination": "OUT_BLUE",
+      "position": [
+        3.1397648073224604,
+        3.138495944042266,
+        0.17999712961520595
+      ]
+    },
+    "cargo_B1_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.6408640336342656,
+        3.0428430589286517,
+        0.18000000014149994
+      ]
+    },
+    "cargo_B1_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        1.8831146636730354,
+        2.841141007430794,
+        0.17999150474568804
+      ]
+    },
+    "cargo_B1_blue": {
+      "destination": "OUT_BLUE",
+      "position": [
+        3.167251868938515,
+        2.757820502879664,
+        0.1800000001086017
+      ]
+    },
+    "cargo_B2_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.633904622621518,
+        2.9424608192083137,
+        0.18000000011074122
+      ]
+    },
+    "cargo_B2_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        1.8955060297629025,
+        2.9486288141998807,
+        0.17999518279438095
+      ]
+    },
+    "cargo_B2_blue": {
+      "destination": "OUT_BLUE",
+      "position": [
+        3.1383936401762482,
+        2.9421431548890986,
+        0.17999723137881252
+      ]
+    },
+    "cargo_B3_red": {
+      "destination": "OUT_RED",
+      "position": [
+        0.6423008825842444,
+        2.853505150858535,
+        0.17999474068570673
+      ]
+    },
+    "cargo_B3_green": {
+      "destination": "OUT_GREEN",
+      "position": [
+        1.8917626159616228,
+        2.7543089736887896,
+        0.17999698135756456
+      ]
+    },
+    "cargo_B3_blue": {
+      "destination": "OUT_BLUE",
+      "position": [
+        3.1470598108434586,
+        2.8477723917814854,
+        0.1799943511923039
+      ]
+    }
+  },
+  "duration_s": 3847.921528333005,
+  "csv": "/tmp/landerpi_warehouse_acceptance_76148.csv",
+  "log": "/tmp/landerpi_warehouse_acceptance_76148.log"
+}

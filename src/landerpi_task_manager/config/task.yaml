@@ -1,0 +1,6 @@
+task_manager:
+  ros__parameters:
+    execution_mode: dry_run
+    dry_run_step_sec: 0.1
+    total_timeout_sec: 360.0
+    csv_path: /tmp/landerpi_experiments/tasks.csv
